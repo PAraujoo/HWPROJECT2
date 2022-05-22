@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Delicious Decorum</title>
+  <style>
+     body {
+      
+      background-position: center center;
+      background-size: cover;
+      transition: 0.4s ease;
+      font-family: 'Monaco', 'Lucida Console', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: scroll;
+      margin: 20px; 
+      border-style: inset;
+      border-width: 10px;
+      border-color: Chartreuse;
+      border-radius: 10px;
+    }
+
+.navbar {
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    
+}
+
+.navbar li {
+    display: inline-block;
+    overflow: hidden;
+
+}
+
+.header .navbar a {
+    text-decoration: none;
+    color: white;
+    width: 100px;
+    display: block;
+    padding: 25px 20px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+    p {
+    font-family: Helvetica, sans-serif;
+    font-size: 130%;
+    background-color: black;
+    color: white;
+    border: 1px solid yellow;
+   }
+   h1 {
+   font-family: "Brush Script M7","Lucida Handwriting",cursive;
+   font-size: 250%;
+   background-color:indigo;
+   color:gold;
+   border: 1px solid purple
+   }
+    div#companybanner { 
+       position: absolute; 
+       top: 0; 
+       left: 0; 
+       background-color: Aqua; 
+       width: 100%; 
+    }
+     div#companybannerimage { 
+       width: 400px;
+       height: 275px; 
+       margin: 0 auto; 
+       padding: 10px; 
+       border: 10px solid red;
+     }
+    div#mainbody { 
+      padding-top: 300px;
+   }
+   body::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: -1;
+   }
+   
+   .containerofslides{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    width: 80vw;
+    height: 80vh;
+    position: relative;
+    overflow:hidden;
+   }
+   .slide{
+    opacity: 0;
+    height: 100vh;
+    width: 100vw;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: -15vh;
+    left: -15vw;
+    transition: 0.4s ease;
+    z-index: 1;
+   }
+   .slide.active{
+    opacity: 1;
+   }
+   .arrow{
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    font-size: 30px;
+    width:5px;
+    height:5px;
+    z-index: 100;
+    border: 2px solid yellow;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+   }
+   .arrow:focus{
+    outline:0;
+   }
+   .left-arrow{
+    left: calc(15vw-65px);
+   }
+   .right-arrow{
+    right: calc(15vw-65px);
+   }
+   img{
+   object-fit: contain;
+   }
+  button {
+  background-color: red;
+  width: 300px;
+  font-size: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 7px solid blue;
+  color: white;
+  cursor: pointer;
+}
+   </style>
+  </head>
+  <body>
+
+    <header class = "header">
+      <nav class = "navbar">
+          <ul>
+              <li><a href="frontpage.html">Home</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="Events.html">Events</a></li>
+              <li><a href="FAQ.html">FAQ</a></li>
+          </ul>
+      </nav>
+  </header>
+
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+    <div id="companybanner">
+     <div id="companybannerimage">
+      <img src="restaurantcartoon.jpg" alt="Restaurant Cartoon" width="100%" height="100%">
+     </div> 
+    </div>
+    <div id="mainbody">
+    <h1>The Delicious Decorum welcomes you!</h1>
+    <h1>Immerse yourself in a paradise of taste and temptation....</h1>
+    <p>We are a restaurant forged with a love for the culinary arts from around the world. We all have a love for food here, but we feel disappointed that the food provided at most restaurants is bland or cliche and unfulfilling.</p>
+    <p>Hence, we founded this restaurant on a mission; to provide the best recipe picks from round the world at cheap accessible prices.</p>
+    <p>Here are some of the foods we have served in the past. The first is Indian Chicken Tikka Masala, second Sosatie, third Italian Jelato, and fourth Chinese Braised Lamb Casserole.</p>
+    <button id="left">Change to previous picture</button>
+     <button id="right">Change to next picture</button>
+    <div class="containerofslides">
+     <div class="slide" style="background-image: url('ChickenTikkaMasala.jpg');">
+     </div> 
+     <div class="slide active" style="background-image: url('Sosatie.jpg');">
+     </div>
+     <div class="slide"  style="background-image: url('ItalianJelato.jpg');">
+     </div>
+     <div class="slide" style="background-image: url('chinesebraisedlambcasserole.jpg');">
+     </div>
+    </div>
+    <script src="script.js"></script>
+ </body>
+</html>
